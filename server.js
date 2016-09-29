@@ -5,12 +5,54 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var aricles = {
+    articleOne: {
+        title: 'aritcle-one',
+        heading: 'Article One',
+        content: `<p> Follow this and you'll learn and acheive more </p> `,
+    },
+    articleTwo: {
+        title: 'aritcle-two',
+        heading: 'Article Two',
+        content: `<p> Follow this and you'll learn and acheive more</p>`,
+    },
+    articleThree: {
+        title: 'aritcle-one',
+        heading: 'Article Three',
+        content: `<p> Follow this and you'll learn and acheive more</p>`,
+    }
+}
+
+var htmlCode = function(data) {
+    var html = 
+    `<html>
+        
+    <head>
+        <title>
+            Article-One
+        </title>
+        <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
+        
+    </head>
+    
+    <body>
+        <h1 class="heading"> Learning is good </h1>
+        
+        <p> Follow this and you'll learn and acheive more</p>
+        
+    </body>
+    
+    </html>`;
+    return html;
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+app.get('/:articleName', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'articleName'));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
