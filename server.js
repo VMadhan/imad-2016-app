@@ -29,16 +29,16 @@ var htmlCode = function(data) {
         
     <head>
         <title>
-            ${title}
+            ${data.title}
         </title>
         <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
         
     </head>
     
     <body>
-        <h1 class="heading">${heading}</h1>
+        <h1 class="heading">${data.heading}</h1>
         
-        ${content}
+        ${data.content}
         
     </body>
     
