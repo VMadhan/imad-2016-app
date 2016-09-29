@@ -29,16 +29,16 @@ var htmlCode = function(data) {
         
     <head>
         <title>
-            Article-One
+            ${title}
         </title>
         <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
         
     </head>
     
     <body>
-        <h1 class="heading"> Learning is good </h1>
+        <h1 class="heading">${heading}</h1>
         
-        <p> Follow this and you'll learn and acheive more</p>
+        ${content}
         
     </body>
     
