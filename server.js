@@ -6,22 +6,22 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    articleOne: {
+    'article-one': {
         title: 'aritcle-one',
         heading: 'Article One',
         content: `<p> Follow this and you'll learn and acheive more </p> `,
     },
-    articleTwo: {
+    'article-two': {
         title: 'aritcle-two',
         heading: 'Article Two',
         content: `<p> Follow this and you'll learn and acheive more</p>`,
     },
-    articleThree: {
+    'article-three': {
         title: 'aritcle-one',
         heading: 'Article Three',
         content: `<p> Follow this and you'll learn and acheive more</p>`,
     }
-}
+};
 
 var htmlCode = function(data) {
     var html = 
