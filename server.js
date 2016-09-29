@@ -17,7 +17,7 @@ var articles = {
         content: `<p> Follow this and you'll learn and acheive more</p>`,
     },
     'article-three': {
-        title: 'aritcle-one',
+        title: 'aritcle-three',
         heading: 'Article Three',
         content: `<p> Follow this and you'll learn and acheive more</p>`,
     }
